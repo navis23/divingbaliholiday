@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --swiper-pagination-bullet-border-radius: 0;
+    --swiper-pagination-bullet-width: 40px;
+    --swiper-pagination-bullet-height: 3px;
+    --swiper-pagination-color: #f97316; 
+}
+
+@font-face {
+    font-family: 'Anek Latin';
+    font-weight: 100;
+    font-display: swap;
+    src: url('~/assets/fonts/AnekLatin-Thin.ttf');
+}
+@font-face {
+    font-family: 'Anek Latin';
+    font-weight: 200;
+    font-display: swap;
+    src: url('~/assets/fonts/AnekLatin-ExtraLight.ttf');
+}
+@font-face {
+    font-family: 'Anek Latin';
+    font-weight: 300;
+    font-display: swap;
+    src: url('~/assets/fonts/AnekLatin-Light.ttf');
+}
+@font-face {
+    font-family: 'Anek Latin';
+    font-weight: 400;
+    font-display: swap;
+    src: url('~/assets/fonts/AnekLatin-Regular.ttf');
+}
+@font-face {
+    font-family: 'Anek Latin';
+    font-weight: 500;
+    font-display: swap;
+    src: url('~/assets/fonts/AnekLatin-Medium.ttf');
+}
+@font-face {
+    font-family: 'Anek Latin';
+    font-weight: 600;
+    font-display: swap;
+    src: url('~/assets/fonts/AnekLatin-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'Anek Latin';
+    font-weight: 700;
+    font-display: swap;
+    src: url('~/assets/fonts/AnekLatin-Bold.ttf');
+}
+@font-face {
+    font-family: 'Anek Latin';
+    font-weight: 800;
+    font-display: swap;
+    src: url('~/assets/fonts/AnekLatin-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 100;
+    font-display: swap;
+    src: url('~/assets/fonts/DMSans-Thin.ttf');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 200;
+    font-display: swap;
+    src: url('~/assets/fonts/DMSans-ExtraLight.ttf');
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 300;
+    font-display: swap;
+    src: url('~/assets/fonts/DMSans-Light.ttf');
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-display: swap;
+    src: url('~/assets/fonts/DMSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-display: swap;
+    src: url('~/assets/fonts/DMSans-Medium.ttf');
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 600;
+    font-display: swap;
+    src: url('~/assets/fonts/DMSans-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-display: swap;
+    src: url('~/assets/fonts/DMSans-Bold.ttf');
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 800;
+    font-display: swap;
+    src: url('~/assets/fonts/DMSans-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 900;
+    font-display: swap;
+    src: url('~/assets/fonts/DMSans-Black.ttf');
+}
+
+@layer base {
+    html {
+        font-family: 'DM Sans';
+    }
+}
+
