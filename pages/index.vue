@@ -127,9 +127,11 @@
                             <p class="mt-4 text-sm lg:text-base ">Harga Start from</p>
                             <p class="font-anek text-3xl font-semibold">Rp{{ new Intl.NumberFormat('ID').format( trip.price) }}/orang</p>
                             <div class="mt-4 lg:mt-8">
-                                <ButtonBase class="main"> 
-                                    Booking Now
-                                </ButtonBase>
+                                <NuxtLink :to="`/paket-trip-sastra-adventure/${trip.name.split(' ').join('-')}`">
+                                    <ButtonBase class="main"> 
+                                        More Detail Trip
+                                    </ButtonBase>
+                                </NuxtLink>
                             </div>
                         </div>
                         <div :class="trip.type ? '' : 'lg:order-2'" class="col-span-12 lg:col-span-5 order-1 rounded-2xl overflow-hidden">
@@ -147,7 +149,7 @@
                         <p class="font-anek text-3xl font-semibold">Rp1.100.000/orang</p>
                         <div class="mt-8">
                             <ButtonBase class="main"> 
-                                Booking Now
+                                More Detail Trip
                             </ButtonBase>
                         </div>
                     </div>
@@ -165,7 +167,7 @@
                         <p class="font-anek text-3xl font-semibold">Rp950.000/orang</p>
                         <div class="mt-8">
                             <ButtonBase class="main"> 
-                                Booking Now
+                                More Detail Trip
                             </ButtonBase>
                         </div>
                     </div>
@@ -183,7 +185,7 @@
                         <p class="font-anek text-3xl font-semibold">Rpx.000.000/orang</p>
                         <div class="mt-8">
                             <ButtonBase class="main"> 
-                                Booking Now
+                                More Detail Trip
                             </ButtonBase>
                         </div>
                     </div>
@@ -196,41 +198,18 @@
                         Temukan semua paket trip kami disini.
                     </p>
                     <div class="col-span-12 lg:col-span-4 flex justify-center lg:justify-end">
-                        <ButtonBase class="second"> 
-                            Discover All Trip Packages
-                        </ButtonBase>
+                        <NuxtLink to="/paket-trip-sastra-adventure">
+                            <ButtonBase class="second"> 
+                                Discover All Trip Packages
+                            </ButtonBase>
+                        </NuxtLink>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- cta section -->
-        <div class="my-24 rounded-3xl mx-4 lg:mx-32 overflow-hidden">
-            <div class="relative w-full h-[40rem] lg:h-screen">
-                <div class="relative z-40 grid grid-cols-6 px-4 lg:px-28 h-full">
-                    <div class="col-span-6 lg:col-span-4 flex flex-col justify-center h-full text-white gap-8">
-                        <div class="">
-                            <h1 class="font-anek text-4xl lg:text-6xl tracking-tight text-white font-bold text-center lg:text-left">Petualangan Anda Menjelajahi <span class="text-amber-500">Bali</span> Dimulai Sekarang Juga!</h1>
-                        </div>
-                        <div class="text-center lg:text-left text-base lg:text-xl">
-                            Rasakan Keajaiban Bali & Ciptakan Kenangan Tak Terlupakan Bersama <span class="font-bold text-amber-500 uppercase">Sastra Adventure</span>. Booking Hari Ini Sebelum Slot Habis!
-                        </div>
-                        <div class="flex justify-center lg:justify-start">
-                            <ButtonBase class="main"> 
-                                Reservasi Sekarang
-                            </ButtonBase>
-                        </div>
-                    </div>
-                    <div class="hidden col-span-2 lg:col-span-1 lg:block ">
-                    </div>
-                </div>
-                <div class="absolute w-auto h-auto min-h-full min-w-full max-w-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 bg-black/60">
-                </div>
-                <video class="absolute w-auto h-auto min-h-full min-w-full max-w-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 " autoplay loop muted playsinline>
-                    <source src="/boat.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
+        <CtaSection />
 
         <!-- testimoni section -->
         <div class="px-4 lg:px-32 my-24">
@@ -321,72 +300,16 @@
 <script lang="ts" setup>
     const containerRef = ref(null)
     const containerTwoRef = ref(null)
-    const slides = ref([
-        {
-            id: 1,
-            name: '/img/dive01.webp'
-        },
-        {
-            id: 2,
-            name: '/img/dive02.webp'
-        },
-        {
-            id: 3,
-            name: '/img/dive03.webp'
-        },
-        {
-            id: 4,
-            name: '/img/dive04.webp'
-        },
-        {
-            id: 5,
-            name: '/img/dive05.webp'
-        },
-    ])
+
 
     const tripStore = useTripStore()
 
     const {
-        trips
+        trips,
+        testimonies,
+        slides
     } = storeToRefs(tripStore)
 
-    const testimonies = ref([
-        {
-            id: 1,
-            name: 'Mrs. Smith Elene',
-            country: 'New Zealand',
-            img: '/img/testi01.webp',
-            testi : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate accusantium sapiente cumque, soluta blanditiis quam, inventore beatae maxime necessitatibus dolore quibusdam amet rem.'
-        },
-        {
-            id: 2,
-            name: 'Mr. Nakamura Sanada',
-            country: 'Japan',
-            img: '/img/testi02.webp',
-            testi : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique error sunt eum.'
-        },
-        {
-            id: 3,
-            name: 'Mr. John Snow',
-            country: 'England',
-            img: '/img/testi03.webp',
-            testi : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita reiciendis facilis harum eaque obcaecati dolor eos voluptas velit.'
-        },
-        {
-            id: 4,
-            name: 'Mr. Ceb Sebastian',
-            country: 'France',
-            img: '/img/testi04.webp',
-            testi : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quam molestias rem nihil rerum quidem obcaecati similique debitis pariatur autem nisi, blanditiis voluptate, cupiditate corrupti. Sunt debitis numquam repellat eius.'
-        },
-        {
-            id: 5,
-            name: 'Mr. Slavina Anastasya',
-            country: 'Russia',
-            img: '/img/testi05.webp',
-            testi : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus velit, nihil nisi delectus vitae esse.'
-        },
-    ])
 
     const swiper = useSwiper(containerRef, {
         // effect: 'coverflow',

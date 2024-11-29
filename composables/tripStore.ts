@@ -7,7 +7,7 @@ export const useTripStore = defineStore('tripStore', {
                 description : 'Nikmati Diving bersama <span class="font-bold text-amber-600 uppercase">Sastra Adventure</span> untuk menjelajahi harta karun bawah laut Pulau Menjangan. Menyelami beberapa titik kawasan yang menakjubkan dan kami akan mengajak Anda melihat kehidupan bawah laut yang unik dan tidak terlupakan.',
                 trip_plan : 'Mulai dari pelabuhan 8:30 - 9.00 pagi ( waktu keberangkatan bisa ditentukan). Perjalanan 25 menit dengan perahu cepat. Durasi diving sekitar 4 jam (max 6jam) dengan 2 titik kawasan yang berbeda. Tiba di pulau pemandu akan Menjelaskan titik kawasan diving. Setelah diving pertama, anda memiliki waktu beristirahat sambil menikmati kawasan pulau Menjangan.',
                 img: '/img/dive08.webp',
-                price : 1100000,
+                price : 1700000,
                 facilities : [
                     {
                         facility_id : 1,
@@ -205,7 +205,7 @@ export const useTripStore = defineStore('tripStore', {
                 description : 'Bayangkan malam yang penuh bintang, deburan ombak yang menenangkan, dan aroma BBQ yang menggoda di tepi pantai Teluk Brumbun. Dipadu dengan nuansa adventure saat trackking untuk melihat varietas Bali Starling dan Long Black Tail Monkey, dilanjutkan dengan snorkeling di Pulau Menjangan yang eksotis.',
                 trip_plan : '',
                 img: '/img/beach03.webp',
-                price : 2650000,
+                price : 2500000,
                 facilities : [
                     {
                         facility_id : 1,
@@ -368,6 +368,65 @@ export const useTripStore = defineStore('tripStore', {
                 type : false
             },
             
+        ],
+        testimonies : [
+            {
+                id: 1,
+                name: 'Mrs. Smith Elene',
+                country: 'New Zealand',
+                img: '/img/testi01.webp',
+                testi : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate accusantium sapiente cumque, soluta blanditiis quam, inventore beatae maxime necessitatibus dolore quibusdam amet rem.'
+            },
+            {
+                id: 2,
+                name: 'Mr. Nakamura Sanada',
+                country: 'Japan',
+                img: '/img/testi02.webp',
+                testi : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique error sunt eum.'
+            },
+            {
+                id: 3,
+                name: 'Mr. John Snow',
+                country: 'England',
+                img: '/img/testi03.webp',
+                testi : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita reiciendis facilis harum eaque obcaecati dolor eos voluptas velit.'
+            },
+            {
+                id: 4,
+                name: 'Mr. Ceb Sebastian',
+                country: 'France',
+                img: '/img/testi04.webp',
+                testi : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quam molestias rem nihil rerum quidem obcaecati similique debitis pariatur autem nisi, blanditiis voluptate, cupiditate corrupti. Sunt debitis numquam repellat eius.'
+            },
+            {
+                id: 5,
+                name: 'Mr. Slavina Anastasya',
+                country: 'Russia',
+                img: '/img/testi05.webp',
+                testi : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus velit, nihil nisi delectus vitae esse.'
+            },
+        ],
+        slides : [
+            {
+                id: 1,
+                name: '/img/dive01.webp'
+            },
+            {
+                id: 2,
+                name: '/img/dive02.webp'
+            },
+            {
+                id: 3,
+                name: '/img/dive03.webp'
+            },
+            {
+                id: 4,
+                name: '/img/dive04.webp'
+            },
+            {
+                id: 5,
+                name: '/img/dive05.webp'
+            },
         ]
 
     }),
