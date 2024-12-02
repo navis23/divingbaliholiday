@@ -3,7 +3,7 @@
         <!-- hero section -->
         <div class="mt-32 rounded-3xl mx-4 lg:mx-32 overflow-hidden">
             <div class="relative w-full h-[40rem] lg:h-screen">
-                <div class="relative z-40 grid grid-cols-6 px-4 lg:px-28 h-full">
+                <div class="relative z-40 grid grid-cols-6 px-4 lg:px-24 h-full">
                     <div class="col-span-6 lg:col-span-4 flex flex-col justify-center h-full text-white gap-8">
                         <div class="">
                             <h1 class="font-anek text-4xl lg:text-6xl tracking-tight text-white font-bold text-center lg:text-left"><span class="text-amber-500">Bali</span> Diving & Snorkeling, Exploring Around <span class="text-amber-500">Bali</span>.</h1>
@@ -12,7 +12,7 @@
                             Mari menjelajahi indahnya Bali bersama <span class="font-bold text-amber-500 uppercase">Sastra Adventure</span>. Nikmati paket tour adventure, diving & snorkeling bersama tim profesional kami. Discover Bali Paradise Together Now.
                         </div>
                         <div class="flex justify-center lg:justify-start">
-                            <ButtonBase class="main"> 
+                            <ButtonBase @click="scrollDiscover()" class="main"> 
                                 Lets Adventure Now
                             </ButtonBase>
                         </div>
@@ -66,9 +66,9 @@
                                 <swiper-slide
                                     v-for="(slide, idx) in slides"
                                     :key="idx"
-                                    class="relative flex justify-center items-center h-56 lg:h-80"
+                                    class="relative flex justify-center items-center h-56 lg:h-96"
                                 >
-                                    <img :src="slide.name" alt="" class="object-cover object-center h-56 lg:h-80 w-full" loading="lazy">
+                                    <img :src="slide.name" alt="" class="object-cover object-center h-56 lg:h-96 w-full" loading="lazy">
                                     
                                 </swiper-slide>
                                 <swiper-pagination class="bg-amber-500 text-amber-500 h-10"></swiper-pagination>
@@ -101,8 +101,11 @@
             </div>
         </div>
 
+        <!-- discover scroll stopper -->
+        <div id="scrolldiscover" class="pb-4"></div>
+
         <!-- best package section -->
-        <div class="px-4 lg:px-32 mt-24">
+        <div id="package" class="px-4 lg:px-32 mt-20">
             <div class="mb-8">
                 <div class="flex gap-x-2 items-center">
                     <p class="mt-2"><Icon name="lucide:waves" class="text-3xl lg:text-4xl text-amber-600" /></p>
@@ -119,7 +122,7 @@
             <div class="lg:mt-8 flex flex-col gap-8 lg:gap-16">
                 <template v-for="(trip, index) in trips" :key="trip.id">
                     <div v-if="trip.status" class="grid grid-cols-12 lg:gap-8 lg:h-96">
-                        <div :class="trip.type ? 'lg:bg-gradient-to-l lg:rounded-l-2xl' : 'lg:order-1 lg:items-end lg:bg-gradient-to-r lg:rounded-r-2xl lg:text-right'" class="col-span-12 lg:col-span-7 order-2 flex flex-col items-start justify-start px-4 lg:px-16 py-4 lg:py-8 bg-gradient-to-b from-stone-50 to-sky-50 rounded-b-2xl border-none outline-none transition-all duration-300 text-left">
+                        <div :class="index % 2 ? 'lg:bg-gradient-to-l lg:rounded-l-2xl' : 'lg:order-1 lg:items-end lg:bg-gradient-to-r lg:rounded-r-2xl lg:text-right'" class="col-span-12 lg:col-span-7 order-2 flex flex-col items-start justify-start px-4 lg:px-16 py-4 lg:py-8 bg-gradient-to-b from-stone-50 to-sky-100 rounded-b-2xl border-none outline-none transition-all duration-300 text-left">
                             <p class="font-anek text-2xl lg:text-4xl font-semibold">
                                 {{ trip.name }}
                             </p>
@@ -134,7 +137,7 @@
                                 </NuxtLink>
                             </div>
                         </div>
-                        <div :class="trip.type ? '' : 'lg:order-2'" class="col-span-12 lg:col-span-5 order-1 rounded-2xl overflow-hidden">
+                        <div :class="index % 2 ? '' : 'lg:order-2'" class="col-span-12 lg:col-span-5 order-1 rounded-2xl overflow-hidden">
                             <img :src="trip.img" alt="" class="object-cover object-center h-56 lg:h-96 w-full" loading="lazy">
                         </div>
                     </div>
@@ -193,7 +196,7 @@
                         <img src="/img/dive02.webp" alt="" class="object-cover object-center h-56 lg:h-96 w-full" loading="lazy">
                     </div>
                 </div> -->
-                <div class="grid grid-cols-12 items-center gap-2 h-36 px-4 py-4 lg:px-24 bg-gradient-to-t from-stone-50 to-sky-100/50 rounded-t-2xl border-none outline-none">
+                <div class="grid grid-cols-12 items-center gap-2 h-36 px-4 py-4 lg:px-24 bg-gradient-to-t from-stone-50 to-sky-100 rounded-t-2xl border-none outline-none">
                     <p class="col-span-12 lg:col-span-8 font-anek text-xl lg:text-3xl font-medium text-center lg:text-left">
                         Temukan semua paket trip kami disini.
                     </p>
@@ -355,9 +358,12 @@
         // },
     })
 
-    onMounted(() => {
-    console.log(swiper.instance)
-    })
+    const scrollDiscover = () => {
+        document.getElementById("scrolldiscover")?.scrollIntoView({ 
+            behavior: 'smooth' 
+    });
+    }
+
 </script>
 
 <style>

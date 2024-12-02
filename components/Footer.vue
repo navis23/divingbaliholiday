@@ -46,10 +46,14 @@
                     </div>
                     <div class="mt-2 space-y-1">
                         <p>
-                            Instagram @sastraadventure
+                            <a href="https://www.instagram.com/sastraadventurebali?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+                                IG : <span class="italic text-sky-700">@sastraadventurebali</span> 
+                            </a>
                         </p>
                         <p>
-                            Tiktok @sastraadventure
+                            <a href="https://www.tiktok.com/@sastraadventurebali?_t=8rqMGwg3Rkl&_r=1" target="_blank" rel="noopener noreferrer">
+                                Tiktok : <span class="italic text-sky-700">@sastraadventurebali</span>
+                            </a>
                         </p>
                     </div>
                 </div>

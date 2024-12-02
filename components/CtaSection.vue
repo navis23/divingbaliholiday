@@ -2,7 +2,7 @@
     <div>
         <div class="my-24 rounded-3xl mx-4 lg:mx-32 overflow-hidden">
             <div class="relative w-full h-[40rem] lg:h-screen">
-                <div class="relative z-40 grid grid-cols-6 px-4 lg:px-28 h-full">
+                <div class="relative z-40 grid grid-cols-6 px-4 lg:px-24 h-full">
                     <div class="col-span-6 lg:col-span-4 flex flex-col justify-center h-full text-white gap-8">
                         <div class="">
                             <h1 class="font-anek text-4xl lg:text-6xl tracking-tight text-white font-bold text-center lg:text-left">Petualangan Anda Menjelajahi <span class="text-amber-500">Bali</span> Dimulai Sekarang Juga!</h1>

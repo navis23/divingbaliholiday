@@ -1,5 +1,5 @@
 <template>
-    <button class="text-center font-anek flex items-center gap-x-1 font-semibold rounded-xl shadow cursor-pointer transition-all duration-300 py-3 lg:py-4 px-4 lg:px-6 ease-in-out border-none outline-none leading-none text-base lg:text-lg">
+    <button class="text-center font-anek flex items-center gap-x-1 font-semibold rounded-xl shadow cursor-pointer transition-all duration-300 py-3 lg:py-4 px-4 lg:px-6 ease-in-out border-none outline-none leading-none text-base">
         <slot />
     </button>
 </template>

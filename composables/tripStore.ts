@@ -63,7 +63,7 @@ export const useTripStore = defineStore('tripStore', {
                 itineraries : [
                     {
                         itinerary_id : 1,
-                        itinerary_day : 'Hari ke-1',
+                        itinerary_day : '',
                         itinerary_times : [
                             {
                                 time_id : 1,
@@ -71,6 +71,18 @@ export const useTripStore = defineStore('tripStore', {
                                 time_description : '',
                             },
                         ],
+                    },
+                ],
+                activities : [
+                    {
+                        activities_id : 1,
+                        activities_name : '',
+                        activities_list : [
+                            {
+                                act_id : 1,
+                                act_name : ''
+                            },
+                        ]
                     },
                 ],
                 galleries : [
@@ -162,7 +174,7 @@ export const useTripStore = defineStore('tripStore', {
                 itineraries : [
                     {
                         itinerary_id : 1,
-                        itinerary_day : 'Hari ke-1',
+                        itinerary_day : '',
                         itinerary_times : [
                             {
                                 time_id : 1,
@@ -170,6 +182,18 @@ export const useTripStore = defineStore('tripStore', {
                                 time_description : '',
                             },
                         ],
+                    },
+                ],
+                activities : [
+                    {
+                        activities_id : 1,
+                        activities_name : '',
+                        activities_list : [
+                            {
+                                act_id : 1,
+                                act_name : ''
+                            },
+                        ]
                     },
                 ],
                 galleries : [
@@ -197,14 +221,14 @@ export const useTripStore = defineStore('tripStore', {
                 min_pax : 2,
                 duration : '5 jam',
                 status : true,
-                type : true
+                type : false
             },
             {
                 id: 3,
-                name: 'Exotic Camp Days',
-                description : 'Bayangkan malam yang penuh bintang, deburan ombak yang menenangkan, dan aroma BBQ yang menggoda di tepi pantai Teluk Brumbun. Dipadu dengan nuansa adventure saat trackking untuk melihat varietas Bali Starling dan Long Black Tail Monkey, dilanjutkan dengan snorkeling di Pulau Menjangan yang eksotis.',
+                name: 'Exotic Camp at Gili Island',
+                description : 'Bayangkan malam yang penuh bintang, deburan ombak yang menenangkan, dan aroma BBQ yang menggoda di tepi pantai Pulau Gili. Dipadu dengan nuansa adventure saat snorkeling di Pulau Menjangan yang eksotis.',
                 trip_plan : '',
-                img: '/img/beach03.webp',
+                img: '/img/camp01.webp',
                 price : 2500000,
                 facilities : [
                     {
@@ -283,26 +307,21 @@ export const useTripStore = defineStore('tripStore', {
                         itinerary_times : [
                             {
                                 time_id : 1,
-                                time_hour : '15:00 – 15:25',
-                                time_description : 'Penyeberangan ke Teluk Brumbun (membutuhkan waktu 25 menit)',
+                                time_hour : '16:20 – 16:25',
+                                time_description : 'Penyeberangan ke Pulau Gili (membutuhkan waktu 5 menit)',
                             },
                             {
                                 time_id : 2,
-                                time_hour : '15:25 – 16:25',
-                                time_description : 'Tiba di Teluk Brumbun, trekking singkat untuk melihat Bali Starling dan Long Black Tail Monkey',
-                            },
-                            {
-                                time_id : 3,
                                 time_hour : '16:25 – 18:30',
                                 time_description : 'Bersantai di tepi pantai, mandi dan bersiap-siap untuk makan malam',
                             },
                             {
-                                time_id : 4,
+                                time_id : 3,
                                 time_hour : '18:30 – 21:30',
                                 time_description : 'Makan malam BBQ sederhana',
                             },
                             {
-                                time_id : 5,
+                                time_id : 4,
                                 time_hour : '21:30',
                                 time_description : 'Jam bebas, bermalam di tenda',
                             },
@@ -340,32 +359,205 @@ export const useTripStore = defineStore('tripStore', {
                         ],
                     },
                 ],
+                activities : [
+                    {
+                        activities_id : 1,
+                        activities_name : '',
+                        activities_list : [
+                            {
+                                act_id : 1,
+                                act_name : ''
+                            },
+                        ]
+                    },
+                ],
                 galleries : [
                     {
                         gallery_id : 1,
-                        gallery_name : '/img/beach03.webp'
+                        gallery_name : '/img/camp01.webp'
                     },
                     {
                         gallery_id : 2,
-                        gallery_name : '/img/beach04.webp'
+                        gallery_name : '/img/camp02.webp'
                     },
                     {
                         gallery_id : 3,
-                        gallery_name : '/img/beach05.webp'
+                        gallery_name : '/img/camp04.webp'
                     },
                     {
                         gallery_id : 4,
-                        gallery_name : '/img/beach06.webp'
+                        gallery_name : '/img/camp03.webp'
                     },
                     {
                         gallery_id : 5,
-                        gallery_name : '/img/beach10.webp'
+                        gallery_name : '/img/camp05.webp'
                     },
                 ],
                 min_pax : 2,
                 duration : '2 hari 1 malam',
                 status : true,
                 type : false
+            },
+            {
+                id: 4,
+                name: 'Balinese Cooking Experience',
+                description : 'Aktivitas kelas memasak Bali yang mendetail dapat menjadi pengalaman budaya yang kaya, menawarkan peserta kesempatan untuk mengeksplorasi masakan tradisional Bali dan teknik kulinernya. Kegiatan ini tidak hanya mengajari peserta cara memasak masakan tradisional Bali, namun juga memberikan pemahaman lebih dalam mengenai budaya dan tradisi Bali.',
+                trip_plan : '',
+                img: '/img/cook01.webp',
+                price : 650000,
+                facilities : [
+                    {
+                        facility_id : 1,
+                        facility_name : 'homade hot tea (herbs tea)',
+                    },
+                    {
+                        facility_id : 2,
+                        facility_name : 'Soup ingredients',
+    
+                    },
+                    {
+                        facility_id : 3,
+                        facility_name : 'Main Course ingredients',
+    
+                    },
+                    {
+                        facility_id : 4,
+                        facility_name : 'Side Dishes ingredients',
+    
+                    },
+                    {
+                        facility_id : 5,
+                        facility_name : 'Dessert ingredients',
+    
+                    },
+                ],
+                price_includes : [
+                    {
+                        include_id : 1,
+                        include_name : 'Cooking recipes'
+                    },
+                    {
+                        include_id : 2,
+                        include_name : 'Cooking Chef Instructor'
+                    },
+                    {
+                        include_id : 3,
+                        include_name : 'Cooking Venue'
+                    },
+                    {
+                        include_id : 4,
+                        include_name : 'Dine in Venue'
+                    },
+                ],
+                itineraries : [
+                    {
+                        itinerary_id : 1,
+                        itinerary_day : '',
+                        itinerary_times : [
+                            {
+                                time_id : 1,
+                                time_hour : '',
+                                time_description : '',
+                            },
+                        ],
+                    },
+                ],
+                activities : [
+                    {
+                        activities_id : 1,
+                        activities_name : 'Welcome & Introduction',
+                        activities_list : [
+                            {
+                                act_id : 1,
+                                act_name : 'Para tamu disambut dengan teh panas buatan sendiri yang menyegarkan (teh herbal).'
+                            },
+                            {
+                                act_id : 2,
+                                act_name : 'Instruktur memperkenalkan diri, memberikan gambaran kegiatan hari itu, dan memberikan pengenalan singkat tentang masakan Bali, sejarahnya, dan pengaruhnya dalam budaya Bali.'
+                            },
+                        ]
+                    },
+                    {
+                        activities_id : 2,
+                        activities_name : 'Cooking Preparation',
+                        activities_list : [
+                            {
+                                act_id : 1,
+                                act_name : 'Menuju ke tempat memasak bersama instruktur.'
+                            },
+                            {
+                                act_id : 2,
+                                act_name : 'Instruktur memperkenalkan masakan yang akan disiapkan, menjelaskan bahan-bahannya, dan mendemonstrasikan teknik dasar persiapan seperti mencincang, menggiling bumbu dengan lesung dan alu.'
+                            },
+                            {
+                                act_id : 3,
+                                act_name : 'Bersama didampingi instruktur membuat racikan bumbu tradisional yang dikenal dengan *Bumbu Bali*.'
+                            },
+                        ]
+                    },
+                    {
+                        activities_id : 3,
+                        activities_name : 'Cooking the Dishes',
+                        activities_list : [
+                            {
+                                act_id : 1,
+                                act_name : 'Peserta memasak sop tradisional seperti jukut be Pasih dengan saus bawang jahe.'
+                            },
+                            {
+                                act_id : 2,
+                                act_name : 'Peserta memasak hidangan utama, seperti Sate Lilit** (sate ikan atau ayam cincang yang dililitkan pada batang kelapa).'
+                            },
+                            {
+                                act_id : 3,
+                                act_name : 'Peserta memasak hidangan pendamping seperti *Urab* (salad sayuran kukus dengan kelapa parut dan rempah-rempah) atau *Sambal Matah* (hidangan bawang merah dan serai mentah pedas).'
+                            },
+                            {
+                                act_id : 4,
+                                act_name : 'Peserta memasak hidangan penutup tradisional Bali seperti *Dadar Gulung* (crepes pandan hijau yang diisi kelapa dan gula palem) atau *Klepon* (kue ketan diisi gula palem dan dilapisi kelapa parut).'
+                            },
+                        ]
+                    },
+                    {
+                        activities_id : 4,
+                        activities_name : 'Enjoying the Meal',
+                        activities_list : [
+                            {
+                                act_id : 1,
+                                act_name : 'Setelah proses memasak selesai, peserta duduk bersama menikmati makanan yang telah mereka siapkan.'
+                            },
+                            {
+                                act_id : 2,
+                                act_name : 'Instruktur berbagi lebih banyak tentang etika makan di Bali dan peserta didorong untuk berbagi pengalaman mereka.'
+                            },
+                        ]
+                    },
+                ],
+                galleries : [
+                    {
+                        gallery_id : 1,
+                        gallery_name : '/img/cook02.webp'
+                    },
+                    {
+                        gallery_id : 2,
+                        gallery_name : '/img/cook03.webp'
+                    },
+                    {
+                        gallery_id : 3,
+                        gallery_name : '/img/cook04.webp'
+                    },
+                    {
+                        gallery_id : 4,
+                        gallery_name : '/img/cook01.webp'
+                    },
+                    {
+                        gallery_id : 5,
+                        gallery_name : '/img/cook05.webp'
+                    },
+                ],
+                min_pax : 2,
+                duration : '3 jam',
+                status : false,
+                type : true
             },
             
         ],
@@ -413,7 +605,7 @@ export const useTripStore = defineStore('tripStore', {
             },
             {
                 id: 2,
-                name: '/img/dive02.webp'
+                name: '/img/camp02.webp'
             },
             {
                 id: 3,
@@ -425,7 +617,7 @@ export const useTripStore = defineStore('tripStore', {
             },
             {
                 id: 5,
-                name: '/img/dive05.webp'
+                name: '/img/cook04.webp'
             },
         ]
 

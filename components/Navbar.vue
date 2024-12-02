@@ -1,10 +1,10 @@
 <template>
     <nav :class="isFloat ? 'fixed bg-white shadow-lg' : 'absolute bg-transparent'" class="px-4 lg:px-32 w-full z-[999] text-gray-700">
-        <div class="grid grid-cols-12 py-4 items-center">
+        <div :class="isFloat ? 'py-2' : 'py-4'" class="grid grid-cols-12 items-center">
             <div class="col-span-3 lg:col-span-2">
                 <div>
                     <NuxtLink to="/">
-                        <img src="/img/logo.png" alt="" class="h-20">
+                        <img src="/img/logo.png" alt="" :class="isFloat ? 'h-16' : 'h-20'">
                     </NuxtLink>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 </NuxtLink>
                 
             </div>
-            <div class="col-span-9 lg:col-span-4 flex justify-end items-center gap-x-4 lg:gap-x-8">
+            <div class="col-span-9 lg:col-span-4 flex justify-end items-center gap-x-2 lg:gap-x-8">
                 <NuxtLink to="/kontak-sastra-adventure" activeClass="bg-gray-100 rounded-xl shadow font-semibold text-amber-600 ">
                     <button class="text-center text-sky-700 font-anek flex items-center gap-x-2 rounded-xl cursor-pointer transition-all duration-300 px-4 py-3 ease-in-out border-none outline-none leading-none hover:shadow hover:ring hover:ring-sky-600 hover:text-sky-700">
                         <p class="mt-1"><Icon name="lucide:phone-call" class="text-3xl lg:text-xl" /></p>
@@ -35,9 +35,11 @@
                         </p>
                     </button>
                 </NuxtLink>
-                <ButtonBase class="second hidden lg:block">
-                    Plan a Trip
-                </ButtonBase>
+                <a href="https://wa.me/6281344779974?text=I'm%20interested%20to%20plan%20a%20trip%20with%20SASTRA%20ADVENTURE" target="_blank" rel="noopener noreferrer">
+                    <ButtonBase class="second hidden lg:block">
+                        Plan a Trip
+                    </ButtonBase>
+                </a>
 
                 <ButtonBase @click="switchOpen()" :class="isOpen ? 'danger hidden' : 'second block' " class="lg:hidden">
                     <p class="">{{ isOpen ? 'Close' : 'Menu' }}</p>
@@ -59,29 +61,31 @@
                         </p>
                     </div>
                     <div class="flex flex-col justify-evenly">
-                        <NuxtLink to="/" activeClass="bg-gray-100 rounded-xl shadow font-semibold text-amber-600">
-                            <button @click="switchClose()" class="text-center font-anek flex items-center gap-x-1 rounded-xl cursor-pointer transition-all duration-300 p-4 ease-in-out border-none outline-none leading-none hover:shadow hover:ring hover:ring-sky-600 hover:text-sky-700">
+                        <NuxtLink @click="switchClose()" to="/" activeClass="bg-gray-100 rounded-xl shadow font-semibold text-amber-600">
+                            <button class="text-center font-anek flex items-center gap-x-1 rounded-xl cursor-pointer transition-all duration-300 p-4 ease-in-out border-none outline-none leading-none hover:shadow">
                                 Home
                             </button>
                         </NuxtLink>
-                        <NuxtLink to="/tentang-sastra-adventure" activeClass="bg-gray-100 rounded-xl shadow font-semibold text-amber-600">
-                            <button @click="switchClose()" class="text-center font-anek flex items-center gap-x-1 rounded-xl cursor-pointer transition-all duration-300 p-4 ease-in-out border-none outline-none leading-none hover:shadow hover:ring hover:ring-sky-600 hover:text-sky-700">
+                        <NuxtLink @click="switchClose()" to="/tentang-sastra-adventure" activeClass="bg-gray-100 rounded-xl shadow font-semibold text-amber-600">
+                            <button class="text-center font-anek flex items-center gap-x-1 rounded-xl cursor-pointer transition-all duration-300 p-4 ease-in-out border-none outline-none leading-none hover:shadow">
                                 About Us
                             </button>
                         </NuxtLink>
-                        <NuxtLink to="/paket-trip-sastra-adventure" activeClass="bg-gray-100 rounded-xl shadow font-semibold text-amber-600">
-                            <button @click="switchClose()" class="text-center font-anek flex items-center gap-x-1 rounded-xl cursor-pointer transition-all duration-300 p-4 ease-in-out border-none outline-none leading-none hover:shadow hover:ring hover:ring-sky-600 hover:text-sky-700">
+                        <NuxtLink @click="switchClose()" to="/paket-trip-sastra-adventure" activeClass="bg-gray-100 rounded-xl shadow font-semibold text-amber-600">
+                            <button class="text-center font-anek flex items-center gap-x-1 rounded-xl cursor-pointer transition-all duration-300 p-4 ease-in-out border-none outline-none leading-none hover:shadow">
                                 Package Trip
                             </button>
                         </NuxtLink>
-                        <NuxtLink to="/kontak-sastra-adventure" activeClass="bg-gray-100 rounded-xl shadow font-bold">
-                            <button @click="switchClose()" class="text-center font-anek flex items-center gap-x-1 rounded-xl cursor-pointer transition-all duration-300 p-4 ease-in-out border-none outline-none leading-none hover:shadow hover:ring hover:ring-sky-600 hover:text-sky-700">
+                        <NuxtLink @click="switchClose()" to="/kontak-sastra-adventure" activeClass="bg-gray-100 rounded-xl shadow font-bold">
+                            <button class="text-center font-anek flex items-center gap-x-1 rounded-xl cursor-pointer transition-all duration-300 p-4 ease-in-out border-none outline-none leading-none hover:shadow">
                                 Contact
                             </button>
                         </NuxtLink>
-                        <ButtonBase @click="switchClose()" class="second mt-8">
-                            Plan a Trip
-                        </ButtonBase>
+                        <a href="https://wa.me/6281344779974?text=I'm%20interested%20to%20plan%20a%20trip%20with%20SASTRA%20ADVENTURE" target="_blank" rel="noopener noreferrer">
+                            <ButtonBase @click="switchClose()" class="second mt-8">
+                                Plan a Trip
+                            </ButtonBase>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -96,13 +100,14 @@ const isFloat = ref(false)
 onMounted(() => {
     document.addEventListener('scroll', function() {
         let bodyTopPosition = document.body.getBoundingClientRect().top;
-
+        
         if( bodyTopPosition < -550 ){
             isFloat.value = true
         } else {
             isFloat.value = false
         }
     })
+    
 })
 
 const switchOpen = () => {
