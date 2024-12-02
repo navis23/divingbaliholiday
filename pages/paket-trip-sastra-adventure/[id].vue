@@ -184,10 +184,7 @@
                         </div>
                         <div class="text-base mt-4 space-y-1">
                             <p>
-                                Admin 1 : 081234567876
-                            </p>
-                            <p>
-                                Admin 2 : 082345676543
+                                Admin 1 : 081344779974
                             </p>
                         </div>
                     </div>
@@ -202,7 +199,7 @@
                                 sastraadventurebali@gmail.com
                             </p>
                             <p>
-                                sastraadventurebali.com
+                                divingbaliholiday.com
                             </p>
                         </div>
                     </div>
